@@ -15,10 +15,23 @@ $font-en: "Noto Sans", sans-serif;
   position: fixed;
   display: flex;
   justify-content: center;
-
   .main_content {
     margin-top: 80px;
     width: 77%;
     height: 810px;
   }
 }
+
+.main_dark {
+  width: 100%;
+  height: 1080px;
+  background-image: url("../../public/img/DarkBg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  .main_content {
+    margin-top: 80px;
+    width: 77%;
+    height: 810px;
+  }
+} /* 다크모드 배경 */
