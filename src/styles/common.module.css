@@ -1,0 +1,20 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 1080px;
+  background-image: url("../../public/img/Bg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 810px;
+}/*# sourceMappingURL=common.module.css.map */
