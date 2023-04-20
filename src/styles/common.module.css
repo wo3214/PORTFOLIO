@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   list-style: none;
   margin: 0;
@@ -17,4 +18,20 @@
   margin-top: 80px;
   width: 77%;
   height: 810px;
-}/*# sourceMappingURL=common.module.css.map */
+}
+
+.main_dark {
+  width: 100%;
+  height: 1080px;
+  background-image: url("../../public/img/DarkBg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main_dark .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 810px;
+}
+
+/* 다크모드 배경 *//*# sourceMappingURL=common.module.css.map */

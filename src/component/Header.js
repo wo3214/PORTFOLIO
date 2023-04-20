@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import style from "../styles/header/header.module.scss";
 
-export const Header = () => {
+export const Header = ({ onChange }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
   const [menuOpen, menuSetOpen] = useState(false);
 
@@ -37,18 +37,32 @@ export const Header = () => {
           style={
             menuOpen
               ? {
-                  transform: "translateX(500px)",
+                  transform: "translateX(0px)",
                 }
               : {
-                  transform: "translateX(0px)",
+                  transform: "translateX(500px)",
                 }
           }
         >
           <li>
-            <span style={!isDark ? { color: "#ffffff" } : {}}>HOME</span>
+            <span
+              style={!isDark ? { color: "#ffffff" } : {}}
+              onClick={() => {
+                onChange("Home");
+              }}
+            >
+              HOME
+            </span>
           </li>
           <li>
-            <span style={!isDark ? { color: "#ffffff" } : {}}>ABOUT</span>
+            <span
+              style={!isDark ? { color: "#ffffff" } : {}}
+              onClick={() => {
+                onChange("About");
+              }}
+            >
+              ABOUT
+            </span>
           </li>
           <li>
             <span style={!isDark ? { color: "#ffffff" } : {}}>PROJECT</span>
@@ -65,11 +79,11 @@ export const Header = () => {
           style={
             menuOpen
               ? {
-                  transform: "rotate(0deg)",
-                  transitionDelay: "0.6s",
+                  transform: "rotate(90deg)",
                 }
               : {
-                  transform: "rotate(90deg)",
+                  transform: "rotate(0deg)",
+                  transitionDelay: "0.6s",
                 }
           }
         />
