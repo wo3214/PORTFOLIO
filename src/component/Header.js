@@ -65,10 +65,24 @@ export const Header = ({ onChange }) => {
             </span>
           </li>
           <li>
-            <span style={!isDark ? { color: "#ffffff" } : {}}>PROJECT</span>
+            <span
+              style={!isDark ? { color: "#ffffff" } : {}}
+              onClick={() => {
+                onChange("Project");
+              }}
+            >
+              PROJECT
+            </span>
           </li>
           <li>
-            <span style={!isDark ? { color: "#ffffff" } : {}}>CONTACT</span>
+            <span
+              style={!isDark ? { color: "#ffffff" } : {}}
+              onClick={() => {
+                onChange("Contact");
+              }}
+            >
+              CONTACT
+            </span>
           </li>
         </ul>
       </div>{" "}

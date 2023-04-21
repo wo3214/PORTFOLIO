@@ -1,14 +1,13 @@
 $font-kr: "Noto Sans KR", sans-serif;
 $font-en: "Noto Sans", sans-serif;
 
-.about_content {
+.project_content {
   width: 100%;
   margin-top: 60px;
   height: 715px;
 
-  .about_title {
+  .project_title {
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
     font-family: $font-en;
@@ -18,30 +17,23 @@ $font-en: "Noto Sans", sans-serif;
       font-size: 120px;
     }
     > img {
-      margin-top: 40px;
+      margin-top: 50px;
       margin-left: 20px;
-      height: 62px;
-      width: 62px;
-    }
-    > h3 {
-      margin-top: -20px;
-      width: 100%;
-      font-size: 16px;
-      font-weight: 300;
+      height: 50px;
+      width: 50px;
     }
   }
 
-  .about_itemBox {
+  .project_itemBox {
     width: 100%;
     height: 512px;
     border: 1px solid black;
   }
 
-  .about_bottom {
+  .project_bottom {
     margin-top: 13px;
     width: 100%;
     height: 25px;
-
     display: flex;
     justify-content: space-between;
     > li:nth-child(1) {

@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   width: 430px;
-  transition: 1s;
+  transition: 1s ease-in-out;
   color: #2f2d2d;
 }
 .header .header_menu .menu_list > li {

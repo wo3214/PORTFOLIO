@@ -1,68 +1,62 @@
-.about_content {
+.project_content {
   width: 100%;
   margin-top: 60px;
   height: 715px;
 }
-.about_content .about_title {
+.project_content .project_title {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   font-family: "Noto Sans", sans-serif;
   align-items: center;
 }
-.about_content .about_title > h2 {
+.project_content .project_title > h2 {
   font-weight: 300;
   font-size: 120px;
 }
-.about_content .about_title > img {
-  margin-top: 40px;
+.project_content .project_title > img {
+  margin-top: 50px;
   margin-left: 20px;
-  height: 62px;
-  width: 62px;
+  height: 50px;
+  width: 50px;
 }
-.about_content .about_title > h3 {
-  margin-top: -20px;
-  width: 100%;
-  font-size: 16px;
-  font-weight: 300;
-}
-.about_content .about_itemBox {
+.project_content .project_itemBox {
   width: 100%;
   height: 512px;
   border: 1px solid black;
 }
-.about_content .about_bottom {
+.project_content .project_bottom {
   margin-top: 13px;
   width: 100%;
   height: 25px;
   display: flex;
   justify-content: space-between;
 }
-.about_content .about_bottom > li:nth-child(1) {
+.project_content .project_bottom > li:nth-child(1) {
   display: flex;
 }
-.about_content .about_bottom > li:nth-child(1) > p {
+.project_content .project_bottom > li:nth-child(1) > p {
   cursor: pointer;
   font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin-left: 30px;
 }
-.about_content .about_bottom > li:nth-child(1) > img {
+.project_content .project_bottom > li:nth-child(1) > img {
   cursor: pointer;
   width: 79px;
 }
-.about_content .about_bottom > li:nth-child(2) {
+.project_content .project_bottom > li:nth-child(2) {
   display: flex;
 }
-.about_content .about_bottom > li:nth-child(2) > p {
+.project_content .project_bottom > li:nth-child(2) > p {
   cursor: pointer;
   font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin-right: 30px;
 }
-.about_content .about_bottom > li:nth-child(2) > img {
+.project_content .project_bottom > li:nth-child(2) > img {
   cursor: pointer;
   width: 79px;
-}/*# sourceMappingURL=about.module.css.map */
+}/*# sourceMappingURL=project.module.css.map */

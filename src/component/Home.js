@@ -36,7 +36,12 @@ export const Home = ({ onChange }) => {
         >
           Next Page
         </p>
-        <img src={isDark ? "img/arrowRight.svg" : "img/arrowRightDark.svg"} />
+        <img
+          src={isDark ? "img/arrowRight.svg" : "img/arrowRightDark.svg"}
+          onClick={() => {
+            onChange("About");
+          }}
+        />
       </div>
 
       <ul className={style.bottom_text}>
