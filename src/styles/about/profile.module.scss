@@ -1,0 +1,157 @@
+@import "../common.module.scss";
+$font-kr: "Noto Sans KR", sans-serif;
+$font-en: "Noto Sans", sans-serif;
+
+.profile_box {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+
+  p:nth-child(1) {
+    margin-top: 50px;
+  }
+  p:nth-child(4) {
+    margin-bottom: 5px;
+  }
+  p:nth-child(6) {
+    margin-bottom: 5px;
+  }
+
+  > p {
+    font-family: $font-kr;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .sub_text {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+}
+
+/* ==============================반응형===================================== */
+@include tablet {
+  .profile_box {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+
+    p:nth-child(1) {
+      margin-top: 50px;
+    }
+    p:nth-child(4) {
+      margin-bottom: 5px;
+    }
+    p:nth-child(6) {
+      margin-bottom: 5px;
+    }
+
+    > p {
+      font-family: $font-kr;
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .sub_text {
+      margin-left: 10px;
+      font-size: 15px;
+    }
+  }
+}
+
+@include mobile {
+  .profile_box {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+
+    p:nth-child(1) {
+      margin-top: 100px;
+    }
+    p:nth-child(4) {
+      margin-bottom: 5px;
+    }
+    p:nth-child(6) {
+      margin-bottom: 5px;
+    }
+
+    > p {
+      font-family: $font-kr;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .sub_text {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@include minimobile {
+  .profile_box {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    p:nth-child(1) {
+      width: 60%;
+    }
+    p:nth-child(2) {
+      width: 60%;
+    }
+    P:nth-child(3) {
+      width: 60%;
+    }
+
+    p:nth-child(4) {
+      position: absolute;
+      top: 20.5%;
+      right: 30%;
+    }
+    p:nth-child(5) {
+      position: absolute;
+      top: 33.5%;
+      right: 8%;
+    }
+    p:nth-child(6) {
+      width: 60%;
+    }
+
+    > p {
+      font-family: $font-kr;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .sub_text {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+@include minimobile2 {
+  .profile_box {
+    width: 100%;
+    margin-top: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    > p {
+      margin-top: -5px;
+      width: 100%;
+      font-family: $font-kr;
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+    .sub_text {
+      margin-left: 10px;
+      font-size: 12px;
+    }
+  }
+}

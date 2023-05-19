@@ -1,3 +1,40 @@
+@charset "UTF-8";
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/Bg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+.main_dark {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/DarkBg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main_dark .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+/* 다크모드 배경 */
 .contact_content {
   width: 100%;
   margin-top: 60px;
@@ -29,9 +66,44 @@
   font-weight: 300;
 }
 .contact_content .contact_itemBox {
+  position: relative;
   width: 100%;
   height: 512px;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_content .contact_itemBox .contact_item {
+  width: 60%;
+  height: 185px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+.contact_content .contact_itemBox .contact_item > li {
+  text-align: center;
+}
+.contact_content .contact_itemBox .contact_item > li > img {
+  width: 50px;
+  height: 50px;
+}
+.contact_content .contact_itemBox .contact_item > li > h3 {
+  margin-top: 25px;
+  font-family: "Noto Sans", sans-serif;
+  color: #656565;
+  font-size: 20px;
+  font-weight: bold;
+}
+.contact_content .contact_itemBox .contact_item > li > p {
+  margin-top: 25px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+.contact_content .contact_itemBox .contact_ball {
+  position: absolute;
+  bottom: -15%;
+  right: 0px;
 }
 .contact_content .contact_bottom {
   margin-top: 13px;
@@ -53,4 +125,516 @@
 .contact_content .contact_bottom > li:nth-child(1) > img {
   cursor: pointer;
   width: 79px;
+}
+
+/* ==============================반응형===================================== */
+@media (min-width: 1404px) and (max-width: 1919px) {
+  .contact_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 715px;
+  }
+  .contact_content .contact_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .contact_content .contact_title > h2 {
+    font-weight: 300;
+    font-size: 110px;
+    margin-left: -10px;
+  }
+  .contact_content .contact_title > img {
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+  }
+  .contact_content .contact_title > h3 {
+    margin-top: -20px;
+    margin-left: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .contact_content .contact_itemBox {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_content .contact_itemBox .contact_item {
+    width: 60%;
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+  }
+  .contact_content .contact_itemBox .contact_item > li {
+    text-align: center;
+  }
+  .contact_content .contact_itemBox .contact_item > li > img {
+    width: 50px;
+    height: 50px;
+  }
+  .contact_content .contact_itemBox .contact_item > li > h3 {
+    margin-top: 25px;
+    font-family: "Noto Sans", sans-serif;
+    color: #656565;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .contact_content .contact_itemBox .contact_item > li > p {
+    margin-top: 25px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .contact_content .contact_itemBox .contact_ball {
+    position: absolute;
+    bottom: -15%;
+    right: -6%;
+  }
+  .contact_content .contact_bottom {
+    margin-top: 13px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1404px) {
+  .contact_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 715px;
+  }
+  .contact_content .contact_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .contact_content .contact_title > h2 {
+    font-weight: 300;
+    font-size: 80px;
+    margin-left: -10px;
+  }
+  .contact_content .contact_title > img {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 48px;
+    width: 48px;
+  }
+  .contact_content .contact_title > h3 {
+    margin-top: -20px;
+    margin-left: 5px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .contact_content .contact_itemBox {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_content .contact_itemBox .contact_item {
+    width: 80%;
+    height: 185px;
+    display: flex;
+    /* justify-content: center; */
+    /* gap: 150px; */
+  }
+  .contact_content .contact_itemBox .contact_item > li {
+    width: 30%;
+    text-align: center;
+  }
+  .contact_content .contact_itemBox .contact_item > li > img {
+    width: 45px;
+    height: 45px;
+  }
+  .contact_content .contact_itemBox .contact_item > li > h3 {
+    margin-top: 25px;
+    font-family: "Noto Sans", sans-serif;
+    color: #656565;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .contact_content .contact_itemBox .contact_item > li > p {
+    margin-top: 25px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .contact_content .contact_itemBox .contact_ball {
+    position: absolute;
+    bottom: -23%;
+    right: -5%;
+    width: 300px;
+  }
+  .contact_content .contact_itemBox .contact_ball > img {
+    width: 100%;
+  }
+  .contact_content .contact_bottom {
+    margin-top: 13px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .contact_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 550px;
+  }
+  .contact_content .contact_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .contact_content .contact_title > h2 {
+    font-weight: 300;
+    font-size: 60px;
+    margin-left: -10px;
+  }
+  .contact_content .contact_title > img {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+  }
+  .contact_content .contact_title > h3 {
+    margin-top: -15px;
+    margin-left: -1px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .contact_content .contact_itemBox {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_content .contact_itemBox .contact_item {
+    margin-top: 100px;
+    width: 100%;
+    height: 185px;
+    display: flex;
+    /* justify-content: center; */
+    /* gap: 150px; */
+  }
+  .contact_content .contact_itemBox .contact_item > li {
+    width: 30%;
+    text-align: center;
+  }
+  .contact_content .contact_itemBox .contact_item > li > img {
+    width: 40px;
+    height: 40px;
+  }
+  .contact_content .contact_itemBox .contact_item > li > h3 {
+    margin-top: 15px;
+    font-family: "Noto Sans", sans-serif;
+    color: #656565;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .contact_content .contact_itemBox .contact_item > li > p {
+    margin-top: 15px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .contact_content .contact_itemBox .contact_ball {
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 300px;
+  }
+  .contact_content .contact_itemBox .contact_ball > img {
+    width: 100%;
+  }
+  .contact_content .contact_bottom {
+    margin-top: 40px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+}
+@media (min-width: 475px) and (max-width: 767px) {
+  .contact_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 550px;
+  }
+  .contact_content .contact_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .contact_content .contact_title > h2 {
+    font-weight: 300;
+    font-size: 40px;
+    margin-left: 1px;
+  }
+  .contact_content .contact_title > img {
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 28px;
+    width: 28px;
+  }
+  .contact_content .contact_title > h3 {
+    margin-top: -8px;
+    margin-left: 8px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .contact_content .contact_itemBox {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_content .contact_itemBox .contact_item {
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 65%;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 20px;
+  }
+  .contact_content .contact_itemBox .contact_item > li {
+    width: 100%;
+    display: flex;
+    /*   align-items: center; */
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .contact_content .contact_itemBox .contact_item > li > img {
+    transform: translateY(60px);
+    width: 40px;
+    height: 40px;
+  }
+  .contact_content .contact_itemBox .contact_item > li > h3 {
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Noto Sans", sans-serif;
+    color: #656565;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .contact_content .contact_itemBox .contact_item > li > p {
+    width: 100%;
+    margin-top: 2px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+  }
+  .contact_content .contact_itemBox .contact_ball {
+    position: absolute;
+    bottom: -28%;
+    right: -1%;
+    width: 150px;
+  }
+  .contact_content .contact_itemBox .contact_ball > img {
+    width: 100%;
+  }
+  .contact_content .contact_bottom {
+    margin-top: 74px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+}
+@media (max-width: 474px) {
+  .contact_content {
+    width: 100%;
+    margin-top: 30px;
+    height: 550px;
+  }
+  .contact_content .contact_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .contact_content .contact_title > h2 {
+    font-weight: 300;
+    font-size: 40px;
+    margin-left: 1px;
+  }
+  .contact_content .contact_title > img {
+    margin-top: 8px;
+    margin-left: 5px;
+    height: 28px;
+    width: 28px;
+  }
+  .contact_content .contact_title > h3 {
+    margin-top: -8px;
+    margin-left: 8px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .contact_content .contact_itemBox {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_content .contact_itemBox .contact_item {
+    margin-top: 0px;
+    margin-left: 30px;
+    width: 65%;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 80px;
+  }
+  .contact_content .contact_itemBox .contact_item > li {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    /*   align-items: center; */
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .contact_content .contact_itemBox .contact_item > li > img {
+    transform: translate(-40px, 62px);
+    width: 40px;
+    height: 40px;
+  }
+  .contact_content .contact_itemBox .contact_item > li > h3 {
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Noto Sans", sans-serif;
+    color: #656565;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .contact_content .contact_itemBox .contact_item > li > p {
+    width: 100%;
+    margin-top: 2px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .contact_content .contact_itemBox .contact_ball {
+    position: absolute;
+    bottom: -34%;
+    right: -3%;
+    width: 120px;
+  }
+  .contact_content .contact_itemBox .contact_ball > img {
+    width: 100%;
+  }
+  .contact_content .contact_bottom {
+    margin-top: 114px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .contact_content .contact_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 40px;
+  }
 }/*# sourceMappingURL=contact.module.css.map */

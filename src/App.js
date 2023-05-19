@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Header } from "./component/Header";
 import { Home } from "./component/Home";
-import { About } from "./component/About";
-import { Project } from "./component/Project";
+import { About } from "./component/about/About";
+import { Project } from "./component/project/Project";
 import { Contact } from "./component/Contact";
 import { ThemeContext } from "./context/ThemeContext";
 import style from "./styles/common.module.scss";
 import { AnimatePresence } from "framer-motion";
+import { Plani } from "./component/project/PlanI";
+import { Moa } from "./component/project/Moa";
+import { Poke } from "./component/project/Poke";
 
 function App() {
   const [isDark, setIsDark] = useState(true); /* 다크모드 */
@@ -33,6 +36,13 @@ function App() {
             {currentContent === "Contact" && (
               <Contact onChange={handleContentChange} />
             )}
+            {currentContent === "Plani" && (
+              <Plani onChange={handleContentChange} />
+            )}
+            {currentContent === "Poke" && (
+              <Poke onChange={handleContentChange} />
+            )}
+            {currentContent === "Moa" && <Moa onChange={handleContentChange} />}
           </AnimatePresence>
         </div>
       </div>

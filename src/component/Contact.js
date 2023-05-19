@@ -5,6 +5,7 @@ import { ThemeContext } from "../context/ThemeContext";
 
 export const Contact = ({ onChange }) => {
   const { isDark, setIsDark } = useContext(ThemeContext);
+
   return (
     <motion.div
       key="Contact"
@@ -21,7 +22,34 @@ export const Contact = ({ onChange }) => {
           Thank you for taking the time to view my portfolio
         </h3>
       </div>
-      <div className={style.contact_itemBox}></div>
+      <div className={style.contact_itemBox}>
+        <ul className={style.contact_item}>
+          <li>
+            <img src={isDark ? "img/location.png" : "img/location-white.png"} />
+            <h3 style={!isDark ? { color: "#ffffff" } : {}}>ADDRESS</h3>
+            <p style={!isDark ? { color: "#ffffff" } : {}}>경기도 의정부시</p>
+          </li>
+          <li>
+            <img src={isDark ? "img/phone.png" : "img/phone-white.png"} />
+            <h3 style={!isDark ? { color: "#ffffff" } : {}}>PHONE</h3>
+            <p style={!isDark ? { color: "#ffffff" } : {}}>010 9466 5392</p>
+          </li>
+          <li>
+            <img src={isDark ? "img/email.png" : "img/email-white.png"} />
+            <h3 style={!isDark ? { color: "#ffffff" } : {}}>EMAIL</h3>
+            <p style={!isDark ? { color: "#ffffff" } : {}}>wo32144@naver.com</p>
+          </li>
+        </ul>
+
+        <div className={style.contact_ball}>
+          <motion.img
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1.6 }}
+            src="img/contact-ball.png"
+          />
+        </div>
+      </div>
       <ul className={style.contact_bottom}>
         <li
           onClick={() => {

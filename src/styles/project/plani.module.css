@@ -1,0 +1,799 @@
+@charset "UTF-8";
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/Bg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+.main_dark {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/DarkBg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main_dark .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+/* 다크모드 배경 */
+.plani_content {
+  width: 100%;
+  margin-top: 60px;
+  height: 715px;
+  display: flex;
+}
+.plani_content .plani_leftBox {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.plani_content .plani_leftBox > p {
+  margin-top: 80px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+.plani_content .plani_leftBox > h2 {
+  margin-top: 10px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+}
+.plani_content .plani_leftBox .plani_list {
+  width: 690px;
+  height: 120px;
+  margin-top: 40px;
+  margin-left: 0;
+}
+.plani_content .plani_leftBox .plani_list .list_item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plani_content .plani_leftBox .plani_list .list_item > div {
+  width: 90%;
+  height: 90%;
+}
+.plani_content .plani_leftBox .plani_list .list_item > div > img {
+  width: 190px;
+  height: 110px;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  /*   object-fit: cove */
+}
+.plani_content .plani_leftBox .plani_text {
+  margin-top: 40px;
+  width: 100%;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+.plani_content .plani_leftBox .plani_text > p {
+  margin-bottom: 10px;
+}
+.plani_content .plani_leftBox .plani_text > div {
+  width: 100%;
+  height: 70px;
+  display: flex;
+}
+.plani_content .plani_leftBox .plani_text > div > p {
+  width: 9.5%;
+}
+.plani_content .plani_leftBox .plani_text > div > div {
+  width: 80%;
+}
+.plani_content .plani_leftBox .plani_bottom {
+  margin-top: 49px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+  display: flex;
+}
+.plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 30px;
+}
+.plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+  cursor: pointer;
+  width: 79px;
+}
+.plani_content .plani_rightBox {
+  width: 50%;
+  height: 100%;
+}
+.plani_content .plani_rightBox .plani_overView {
+  margin-top: 130px;
+  width: 100%;
+  height: 440px;
+  overflow: hidden;
+}
+.plani_content .plani_rightBox .plani_overView > li {
+  width: 100%;
+  height: 100%;
+}
+.plani_content .plani_rightBox .plani_overView > li > img {
+  width: 99%;
+  height: 99%;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+}
+.plani_content .plani_rightBox > a {
+  display: block;
+  margin-right: 5px;
+  margin-top: 50px;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 1404px) and (max-width: 1919px) {
+  .plani_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 715px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox {
+    width: 60%;
+    height: 100%;
+    position: relative;
+  }
+  .plani_content .plani_leftBox > p {
+    margin-top: 80px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .plani_content .plani_leftBox > h2 {
+    margin-top: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+  }
+  .plani_content .plani_leftBox .plani_list {
+    width: 100%;
+    height: 120px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div {
+    width: 90%;
+    height: 90%;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div > img {
+    width: 190px;
+    height: 110px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+    /*   object-fit: cove */
+  }
+  .plani_content .plani_leftBox .plani_text {
+    margin-top: 40px;
+    width: 100%;
+    font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 14px;
+  }
+  .plani_content .plani_leftBox .plani_text > p {
+    margin-bottom: 10px;
+  }
+  .plani_content .plani_leftBox .plani_text > div {
+    width: 100%;
+    height: 70px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_text > div > p {
+    width: 9.5%;
+  }
+  .plani_content .plani_leftBox .plani_text > div > div {
+    width: 80%;
+  }
+  .plani_content .plani_leftBox .plani_bottom {
+    margin-top: 49px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+  .plani_content .plani_rightBox {
+    width: 40%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView {
+    margin-top: 180px;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+  }
+  .plani_content .plani_rightBox .plani_overView > li {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView > li > img {
+    width: 99.5%;
+    height: 99.5%;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+  .plani_content .plani_rightBox > a {
+    display: block;
+    margin-right: 5px;
+    margin-top: 50px;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1404px) {
+  .plani_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 715px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox {
+    width: 55%;
+    height: 100%;
+    position: relative;
+  }
+  .plani_content .plani_leftBox > p {
+    margin-top: 80px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .plani_content .plani_leftBox > h2 {
+    margin-top: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 53px;
+  }
+  .plani_content .plani_leftBox .plani_list {
+    width: 100%;
+    height: 120px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div {
+    width: 90%;
+    height: 90%;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div > img {
+    /* width: 80%; */
+    height: 110px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+    /*   object-fit: cove */
+  }
+  .plani_content .plani_leftBox .plani_text {
+    margin-top: 40px;
+    width: 100%;
+    font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+  }
+  .plani_content .plani_leftBox .plani_text > p {
+    margin-bottom: 10px;
+  }
+  .plani_content .plani_leftBox .plani_text > div {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .plani_content .plani_leftBox .plani_text > div > p {
+    width: 100%;
+  }
+  .plani_content .plani_leftBox .plani_text > div > div {
+    width: 80%;
+  }
+  .plani_content .plani_leftBox .plani_bottom {
+    margin-top: 49px;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+  .plani_content .plani_rightBox {
+    width: 45%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView {
+    margin-top: 210px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .plani_content .plani_rightBox .plani_overView > li {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView > li > img {
+    width: 99.5%;
+    height: 99.5%;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+  .plani_content .plani_rightBox > a {
+    display: block;
+    margin-right: 5px;
+    margin-top: 20px;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .plani_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 715px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_leftBox > p {
+    margin-top: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .plani_content .plani_leftBox > h2 {
+    margin-top: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .plani_content .plani_leftBox .plani_list {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .plani_content .plani_leftBox .plani_list .list_item {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div {
+    width: 99%;
+    height: 99%;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div > img {
+    width: 100%;
+    height: 110px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+    /*   object-fit: cove */
+  }
+  .plani_content .plani_leftBox .plani_text {
+    width: 80%;
+    font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    position: absolute;
+    top: 75%;
+    left: 1%;
+    z-index: 2;
+  }
+  .plani_content .plani_leftBox .plani_text p:nth-child(2),
+.plani_content .plani_leftBox .plani_text p:nth-child(3),
+.plani_content .plani_leftBox .plani_text p:nth-child(4) {
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div > p {
+    width: 100%;
+  }
+  .plani_content .plani_leftBox .plani_text > div > div {
+    width: 80%;
+  }
+  .plani_content .plani_leftBox .plani_bottom {
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    z-index: 3;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+  .plani_content .plani_rightBox {
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 78%;
+    height: 350px;
+    z-index: 1;
+  }
+  .plani_content .plani_rightBox .plani_overView {
+    margin-top: 210px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .plani_content .plani_rightBox .plani_overView > li {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView > li > img {
+    width: 99.5%;
+    height: 99.5%;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+  .plani_content .plani_rightBox > a {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    width: 20%;
+    right: 0;
+    bottom: -95.5%;
+    z-index: 10;
+  }
+}
+@media (min-width: 475px) and (max-width: 767px) {
+  .plani_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 715px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_leftBox > p {
+    margin-top: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .plani_content .plani_leftBox > h2 {
+    margin-top: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .plani_content .plani_leftBox .plani_list {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .plani_content .plani_leftBox .plani_list .list_item {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div {
+    width: 99%;
+    height: 99%;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div > img {
+    width: 100%;
+    height: 90px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+    /*   object-fit: cove */
+  }
+  .plani_content .plani_leftBox .plani_text {
+    width: 100%;
+    font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 12px;
+    position: absolute;
+    top: 68%;
+    left: 1%;
+    z-index: 2;
+  }
+  .plani_content .plani_leftBox .plani_text p:nth-child(2),
+.plani_content .plani_leftBox .plani_text p:nth-child(3),
+.plani_content .plani_leftBox .plani_text p:nth-child(4) {
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div > p {
+    width: 100%;
+  }
+  .plani_content .plani_leftBox .plani_text > div > div {
+    width: 80%;
+  }
+  .plani_content .plani_leftBox .plani_bottom {
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    z-index: 3;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+  .plani_content .plani_rightBox {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 78%;
+    height: 280px;
+    /*    z-index: 1; */
+  }
+  .plani_content .plani_rightBox .plani_overView {
+    margin-top: 210px;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: absolute;
+    top: -52%;
+    left: 0;
+  }
+  .plani_content .plani_rightBox .plani_overView > li {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView > li > img {
+    width: 99.5%;
+    height: 99.5%;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+  .plani_content .plani_rightBox > a {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    bottom: -111%;
+  }
+}
+@media (max-width: 474px) {
+  .plani_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 715px;
+    display: flex;
+  }
+  .plani_content .plani_leftBox {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_leftBox > p {
+    margin-top: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .plani_content .plani_leftBox > h2 {
+    margin-top: 10px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .plani_content .plani_leftBox .plani_list {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .plani_content .plani_leftBox .plani_list .list_item {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div {
+    width: 99%;
+    height: 99%;
+  }
+  .plani_content .plani_leftBox .plani_list .list_item > div > img {
+    width: 100%;
+    height: 70px;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+    /*   object-fit: cove */
+  }
+  .plani_content .plani_leftBox .plani_text {
+    width: 100%;
+    font-weight: 300;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 10px;
+    position: absolute;
+    top: 60%;
+    left: 1%;
+    z-index: 2;
+    text-align: center;
+  }
+  .plani_content .plani_leftBox .plani_text p:nth-child(2),
+.plani_content .plani_leftBox .plani_text p:nth-child(3),
+.plani_content .plani_leftBox .plani_text p:nth-child(4) {
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+  }
+  .plani_content .plani_leftBox .plani_text > div > p {
+    width: 100%;
+  }
+  .plani_content .plani_leftBox .plani_text > div > div {
+    width: 80%;
+  }
+  .plani_content .plani_leftBox .plani_bottom {
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    z-index: 3;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .plani_content .plani_leftBox .plani_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 40px;
+  }
+  .plani_content .plani_rightBox {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 78%;
+    height: 260px;
+    /*    z-index: 1; */
+  }
+  .plani_content .plani_rightBox .plani_overView {
+    margin-top: 210px;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: absolute;
+    top: -52%;
+    left: 0;
+  }
+  .plani_content .plani_rightBox .plani_overView > li {
+    width: 100%;
+    height: 100%;
+  }
+  .plani_content .plani_rightBox .plani_overView > li > img {
+    width: 99.5%;
+    height: 99.5%;
+    box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+  .plani_content .plani_rightBox > a {
+    display: block;
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    width: 30%;
+    right: 0;
+    bottom: -129%;
+  }
+}/*# sourceMappingURL=plani.module.css.map */

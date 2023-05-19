@@ -8,7 +8,7 @@
 
 .main {
   width: 100%;
-  height: 1080px;
+  height: 108vh;
   background-image: url("../../public/img/Bg.png");
   position: fixed;
   display: flex;
@@ -17,12 +17,12 @@
 .main .main_content {
   margin-top: 80px;
   width: 77%;
-  height: 810px;
+  height: 81vh;
 }
 
 .main_dark {
   width: 100%;
-  height: 1080px;
+  height: 108vh;
   background-image: url("../../public/img/DarkBg.png");
   position: fixed;
   display: flex;
@@ -31,7 +31,7 @@
 .main_dark .main_content {
   margin-top: 80px;
   width: 77%;
-  height: 810px;
+  height: 81vh;
 }
 
 /* 다크모드 배경 *//*# sourceMappingURL=common.module.css.map */

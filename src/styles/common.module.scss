@@ -1,6 +1,41 @@
 $font-kr: "Noto Sans KR", sans-serif;
 $font-en: "Noto Sans", sans-serif;
 
+$minimobile: 475px;
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1404px;
+
+@mixin minimobile2 {
+  @media (max-width: 474px) {
+    @content;
+  }
+}
+
+@mixin minimobile {
+  @media (min-width: $minimobile) and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($tablet)) and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) and (max-width: 1919px) {
+    @content;
+  }
+}
+
 * {
   list-style: none;
   margin: 0;
@@ -10,7 +45,7 @@ $font-en: "Noto Sans", sans-serif;
 
 .main {
   width: 100%;
-  height: 1080px;
+  height: 108vh;
   background-image: url("../../public/img/Bg.png");
   position: fixed;
   display: flex;
@@ -19,13 +54,13 @@ $font-en: "Noto Sans", sans-serif;
   .main_content {
     margin-top: 80px;
     width: 77%;
-    height: 810px;
+    height: 81vh;
   }
 }
 
 .main_dark {
   width: 100%;
-  height: 1080px;
+  height: 108vh;
   background-image: url("../../public/img/DarkBg.png");
   position: fixed;
   display: flex;
@@ -33,6 +68,6 @@ $font-en: "Noto Sans", sans-serif;
   .main_content {
     margin-top: 80px;
     width: 77%;
-    height: 810px;
+    height: 81vh;
   }
 } /* 다크모드 배경 */

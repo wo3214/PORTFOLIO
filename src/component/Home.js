@@ -14,20 +14,35 @@ export const Home = ({ onChange }) => {
       exit={{ opacity: 0 }}
       transition={{ type: "spring", duration: 0.7 }}
     >
-      <div
+      <motion.div
         className={style.home_text}
         style={!isDark ? { color: "#ffffff" } : {}}
+        initial={{ opacity: 0, y: "50px" }}
+        animate={{ opacity: 1, y: "0" }}
+        transition={{ duration: 1.6 }}
       >
         <p>FRONT-END</p>
         <p>DEVELOPER</p>
         <p>PORTFOLIO</p>
         <img src="img/homeName.png" />
-      </div>
+      </motion.div>
       <div className={style.home_balls}>
-        <img src="img/ballTest.png" /> {/* css 처리 */}
+        <div className={style.orangeBall}></div>
+        <div className={style.purpleBall}></div>
+        <div className={style.greenBall}></div>
       </div>
 
-      <div className={style.pageMove}>
+      <motion.div
+        className={style.pageMove}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 0.7,
+          repeat: Infinity,
+          repeatDelay: 1,
+          delay: 2,
+        }}
+      >
         <p
           style={!isDark ? { color: "#ffffff" } : {}}
           onClick={() => {
@@ -42,9 +57,14 @@ export const Home = ({ onChange }) => {
             onChange("About");
           }}
         />
-      </div>
+      </motion.div>
 
-      <ul className={style.bottom_text}>
+      <motion.ul
+        className={style.bottom_text}
+        initial={{ opacity: 0, y: "50px" }}
+        animate={{ opacity: 1, y: "0" }}
+        transition={{ duration: 1.6 }}
+      >
         <li>
           <p style={!isDark ? { color: "#ffffff" } : {}}>
             THIS PAGE IS A SITE CREATED FOR PERSONAL <br />
@@ -56,7 +76,7 @@ export const Home = ({ onChange }) => {
             KIM HYUNG JAE ⓒ 2023 PORTFOLIO
           </p>
         </li>
-      </ul>
+      </motion.ul>
     </motion.div>
   );
 };

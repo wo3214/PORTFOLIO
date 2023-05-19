@@ -25,84 +25,86 @@ export const Header = ({ onChange }) => {
           className={style.mode_ball}
           style={
             !isDark
-              ? { backgroundColor: "#262626", transform: "translateX(24px)" }
+              ? { backgroundColor: "#262626", transform: "translateX(114%)" }
               : {}
           }
         ></div>
       </div>{" "}
       {/* 테마버튼 */}
-      <div className={style.header_menu}>
-        <ul
-          className={style.menu_list}
-          style={
-            menuOpen
-              ? {
-                  transform: "translateX(0px)",
-                }
-              : {
-                  transform: "translateX(500px)",
-                }
-          }
-        >
-          <li>
-            <span
-              style={!isDark ? { color: "#ffffff" } : {}}
-              onClick={() => {
-                onChange("Home");
-              }}
-            >
-              HOME
-            </span>
-          </li>
-          <li>
-            <span
-              style={!isDark ? { color: "#ffffff" } : {}}
-              onClick={() => {
-                onChange("About");
-              }}
-            >
-              ABOUT
-            </span>
-          </li>
-          <li>
-            <span
-              style={!isDark ? { color: "#ffffff" } : {}}
-              onClick={() => {
-                onChange("Project");
-              }}
-            >
-              PROJECT
-            </span>
-          </li>
-          <li>
-            <span
-              style={!isDark ? { color: "#ffffff" } : {}}
-              onClick={() => {
-                onChange("Contact");
-              }}
-            >
-              CONTACT
-            </span>
-          </li>
-        </ul>
-      </div>{" "}
-      {/* 헤더 메뉴 */}
-      <div className={style.menu_ham} onClick={menuSet}>
-        <img
-          src={isDark ? "img/menuham.svg" : "img/menuham_Dark.svg"}
-          style={
-            menuOpen
-              ? {
-                  transform: "rotate(90deg)",
-                }
-              : {
-                  transform: "rotate(0deg)",
-                  transitionDelay: "0.6s",
-                }
-          }
-        />
-      </div>{" "}
-      {/* 햄버거메뉴 */}
+      <div className={style.right_box}>
+        <div className={style.header_menu}>
+          <ul
+            className={style.menu_list}
+            style={
+              menuOpen
+                ? {
+                    transform: "translateX(0px)",
+                  }
+                : {
+                    transform: "translateX(500px)",
+                  }
+            }
+          >
+            <li>
+              <span
+                style={!isDark ? { color: "#ffffff" } : {}}
+                onClick={() => {
+                  onChange("Home");
+                }}
+              >
+                HOME
+              </span>
+            </li>
+            <li>
+              <span
+                style={!isDark ? { color: "#ffffff" } : {}}
+                onClick={() => {
+                  onChange("About");
+                }}
+              >
+                ABOUT
+              </span>
+            </li>
+            <li>
+              <span
+                style={!isDark ? { color: "#ffffff" } : {}}
+                onClick={() => {
+                  onChange("Project");
+                }}
+              >
+                PROJECT
+              </span>
+            </li>
+            <li>
+              <span
+                style={!isDark ? { color: "#ffffff" } : {}}
+                onClick={() => {
+                  onChange("Contact");
+                }}
+              >
+                CONTACT
+              </span>
+            </li>
+          </ul>
+        </div>{" "}
+        {/* 헤더 메뉴 */}
+        <div className={style.menu_ham} onClick={menuSet}>
+          <img
+            src={isDark ? "img/menuham.svg" : "img/menuham_Dark.svg"}
+            style={
+              menuOpen
+                ? {
+                    transform: "rotate(90deg)",
+                  }
+                : {
+                    transform: "rotate(0deg)",
+                    transitionDelay: "0.6s",
+                  }
+            }
+          />
+        </div>{" "}
+        {/* 햄버거메뉴 */}
+      </div>
     </div>
   );
 };

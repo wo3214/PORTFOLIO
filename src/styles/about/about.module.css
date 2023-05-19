@@ -1,3 +1,40 @@
+@charset "UTF-8";
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/Bg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+.main_dark {
+  width: 100%;
+  height: 108vh;
+  background-image: url("../../public/img/DarkBg.png");
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+.main_dark .main_content {
+  margin-top: 80px;
+  width: 77%;
+  height: 81vh;
+}
+
+/* 다크모드 배경 */
 .about_content {
   width: 100%;
   margin-top: 60px;
@@ -29,7 +66,59 @@
 .about_content .about_itemBox {
   width: 100%;
   height: 512px;
-  border: 1px solid black;
+  display: flex;
+}
+.about_content .about_itemBox .about_itemBox_content {
+  width: 49.5%;
+  height: 100%;
+  position: relative;
+}
+.about_content .about_itemBox .about_itemBox_content .about_profileBox {
+  z-index: 1;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+  top: 2%;
+  transform: rotate(9deg);
+  transition: 0.5s ease;
+}
+.about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+  position: absolute;
+  top: 45%;
+  left: 18%;
+  z-index: 3;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+  top: 35%;
+  transform: rotate(-6deg);
+  transition: 0.5s ease;
+}
+.about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+  z-index: 2;
+  position: absolute;
+  top: 15%;
+  left: 47%;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+  top: 5%;
+  transform: rotate(-4deg);
+  transition: 0.5s ease;
+}
+.about_content .about_itemBox .about_line {
+  width: 1%;
+  border-right: 1px solid black;
+}
+.about_content .about_itemBox .about_items {
+  width: 49.5%;
+  height: 100%;
 }
 .about_content .about_bottom {
   margin-top: 13px;
@@ -65,4 +154,647 @@
 .about_content .about_bottom > li:nth-child(2) > img {
   cursor: pointer;
   width: 79px;
+}
+
+/* ==============================반응형===================================== */
+@media (min-width: 1404px) and (max-width: 1919px) {
+  .about_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 715px;
+  }
+  .about_content .about_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .about_content .about_title > h2 {
+    font-weight: 300;
+    font-size: 110px;
+  }
+  .about_content .about_title > img {
+    margin-top: 40px;
+    margin-left: 20px;
+    height: 62px;
+    width: 62px;
+  }
+  .about_content .about_title > h3 {
+    margin-top: -20px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .about_content .about_itemBox {
+    width: 100%;
+    height: 460px;
+    display: flex;
+  }
+  .about_content .about_itemBox .about_itemBox_content {
+    width: 49.5%;
+    height: 100%;
+    position: relative;
+  }
+  .about_content .about_itemBox .about_itemBox_content img {
+    width: 310px;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox {
+    z-index: 1;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+    top: 2%;
+    transform: rotate(9deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+    position: absolute;
+    top: 42%;
+    left: 18%;
+    z-index: 3;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+    top: 35%;
+    transform: rotate(-6deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+    top: 5%;
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_line {
+    width: 1%;
+    border-right: 1px solid black;
+  }
+  .about_content .about_itemBox .about_items {
+    width: 49.5%;
+    height: 100%;
+  }
+  .about_content .about_bottom {
+    margin-top: 13px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_content .about_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+  .about_content .about_bottom > li:nth-child(2) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(2) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(2) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1404px) {
+  .about_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 715px;
+  }
+  .about_content .about_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .about_content .about_title > h2 {
+    font-weight: 300;
+    font-size: 80px;
+  }
+  .about_content .about_title > img {
+    margin-top: 30px;
+    margin-left: 15px;
+    height: 45px;
+    width: 45px;
+  }
+  .about_content .about_title > h3 {
+    margin-top: -20px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .about_content .about_itemBox {
+    width: 100%;
+    height: 460px;
+    display: flex;
+  }
+  .about_content .about_itemBox .about_itemBox_content {
+    width: 49.5%;
+    height: 100%;
+    position: relative;
+  }
+  .about_content .about_itemBox .about_itemBox_content img {
+    width: 240px;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox {
+    z-index: 1;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+    top: 10%;
+    transform: rotate(9deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+    position: absolute;
+    top: 42%;
+    left: 18%;
+    z-index: 3;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+    top: 35%;
+    transform: rotate(-6deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+    z-index: 2;
+    position: absolute;
+    top: 21%;
+    left: 40%;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+    top: 13%;
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_line {
+    width: 1%;
+    border-right: 1px solid black;
+  }
+  .about_content .about_itemBox .about_items {
+    width: 49.5%;
+    height: 100%;
+  }
+  .about_content .about_bottom {
+    margin-top: 13px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_content .about_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+  .about_content .about_bottom > li:nth-child(2) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(2) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(2) > img {
+    cursor: pointer;
+    width: 79px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .about_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 550px;
+  }
+  .about_content .about_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .about_content .about_title > h2 {
+    font-weight: 300;
+    font-size: 60px;
+  }
+  .about_content .about_title > img {
+    margin-top: 15px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+  }
+  .about_content .about_title > h3 {
+    margin-top: -18px;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .about_content .about_itemBox {
+    width: 100%;
+    height: 460px;
+    display: flex;
+  }
+  .about_content .about_itemBox .about_itemBox_content {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    margin-top: 50px;
+  }
+  .about_content .about_itemBox .about_itemBox_content img {
+    width: 210px;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox {
+    z-index: 1;
+    position: absolute;
+    top: 19%;
+    left: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+    top: 14%;
+    transform: rotate(9deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+    position: absolute;
+    top: 42%;
+    left: 18%;
+    z-index: 3;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+    top: 35%;
+    transform: rotate(-6deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+    z-index: 2;
+    position: absolute;
+    top: 21%;
+    left: 40%;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+    top: 18%;
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_line {
+    width: 1%;
+    border-right: 1px solid white;
+  }
+  .about_content .about_itemBox .about_items {
+    width: 45%;
+    height: 100%;
+  }
+  .about_content .about_bottom {
+    margin-top: 40px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about_content .about_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+  .about_content .about_bottom > li:nth-child(2) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(2) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(2) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+}
+@media (min-width: 475px) and (max-width: 767px) {
+  .about_content {
+    width: 100%;
+    margin-top: 60px;
+    height: 550px;
+  }
+  .about_content .about_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .about_content .about_title > h2 {
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .about_content .about_title > img {
+    margin-top: 10px;
+    margin-left: 8px;
+    height: 30px;
+    width: 30px;
+  }
+  .about_content .about_title > h3 {
+    margin-top: -10px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .about_content .about_itemBox {
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about_content .about_itemBox .about_itemBox_content {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .about_content .about_itemBox .about_itemBox_content img {
+    width: 210px;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox {
+    z-index: 1;
+    position: absolute;
+    top: 23%;
+    left: 10%;
+    transition: 0.5s ease;
+    transform: rotate(8deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+    z-index: 5;
+    top: 14%;
+    transform: rotate(9deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    z-index: 3;
+    transition: 0.5s ease;
+    transform: rotate(-6deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+    z-index: 4;
+    top: 35%;
+    transform: rotate(-6deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+    z-index: 3;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transition: 0.5s ease;
+    transform: rotate(-3deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+    top: 24%;
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_line {
+    width: 1%;
+    border-right: 1px solid white;
+  }
+  .about_content .about_itemBox .about_items {
+    width: 100%;
+    height: 50%;
+  }
+  .about_content .about_bottom {
+    margin-top: 80px;
+    width: 100%;
+    height: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_content .about_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+  .about_content .about_bottom > li:nth-child(2) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(2) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 30px;
+  }
+  .about_content .about_bottom > li:nth-child(2) > img {
+    cursor: pointer;
+    width: 69px;
+  }
+}
+@media (max-width: 474px) {
+  .about_content {
+    width: 100%;
+    margin-top: 30px;
+    height: 550px;
+  }
+  .about_content .about_title {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Noto Sans", sans-serif;
+    align-items: center;
+  }
+  .about_content .about_title > h2 {
+    font-weight: 300;
+    font-size: 40px;
+  }
+  .about_content .about_title > img {
+    margin-top: 10px;
+    margin-left: 8px;
+    height: 30px;
+    width: 30px;
+  }
+  .about_content .about_title > h3 {
+    margin-top: -10px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .about_content .about_itemBox {
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about_content .about_itemBox .about_itemBox_content {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .about_content .about_itemBox .about_itemBox_content img {
+    width: 210px;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox {
+    z-index: 1;
+    position: absolute;
+    top: 23%;
+    left: 0%;
+    transition: 0.5s ease;
+    transform: rotate(8deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_profileBox:hover {
+    z-index: 5;
+    top: 14%;
+    transform: rotate(9deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox {
+    position: absolute;
+    top: 42%;
+    left: 20%;
+    z-index: 3;
+    transition: 0.5s ease;
+    transform: rotate(-6deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_mottoBox:hover {
+    z-index: 4;
+    top: 35%;
+    transform: rotate(-6deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox {
+    z-index: 3;
+    position: absolute;
+    top: 26%;
+    left: 35%;
+    transition: 0.5s ease;
+    transform: rotate(-3deg);
+    cursor: pointer;
+  }
+  .about_content .about_itemBox .about_itemBox_content .about_skillsBox:hover {
+    top: 24%;
+    transform: rotate(-4deg);
+    transition: 0.5s ease;
+  }
+  .about_content .about_itemBox .about_line {
+    width: 1%;
+    border-right: 1px solid white;
+  }
+  .about_content .about_itemBox .about_items {
+    width: 100%;
+    height: 50%;
+  }
+  .about_content .about_bottom {
+    margin-top: 120px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about_content .about_bottom > li:nth-child(1) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(1) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 20px;
+  }
+  .about_content .about_bottom > li:nth-child(1) > img {
+    cursor: pointer;
+    width: 40px;
+  }
+  .about_content .about_bottom > li:nth-child(2) {
+    display: flex;
+  }
+  .about_content .about_bottom > li:nth-child(2) > p {
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-right: 20px;
+  }
+  .about_content .about_bottom > li:nth-child(2) > img {
+    cursor: pointer;
+    width: 40px;
+  }
 }/*# sourceMappingURL=about.module.css.map */
